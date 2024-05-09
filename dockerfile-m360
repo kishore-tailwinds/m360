@@ -10,5 +10,5 @@ ENV PATH=$PATH:$JAVA_HOME/bin
 ADD https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v2.2.0/opentelemetry-javaagent.jar opentelemetry-javaagent.jar
 COPY config /code/config
 COPY target/lib /code/lib
-COPY startup.sh /code
+
 ENTRYPOINT [ "/bin/bash", "/code/startup.sh" ]
